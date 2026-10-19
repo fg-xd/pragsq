@@ -1,34 +1,61 @@
-# Put your custom build plans here
-
-[buildPlans.IosevkaCustomSample]
-family = "Iosevka Custom Sample"
-spacing = "normal"
+[buildPlans.pragmasevka]
+family = "Pragmasevka"
+spacing = "term"
 serifs = "sans"
 noCvSs = true
-exportGlyphNames = false
+exportGlyphNames = true
 
-[buildPlans.IosevkaCustomSample.weights.Regular]
-shape = 400
-menu = 400
-css = 400
+hintParams = ["-a", "qqq"]
 
-[buildPlans.IosevkaCustomSample.weights.Bold]
-shape = 700
-menu = 700
-css = 700
+    [buildPlans.pragmasevka.widths.normal]
+    shape = 500
+    menu  = 5
+    css   = "normal"
 
-[buildPlans.IosevkaCustomSample.slopes.Upright]
-angle = 0
-shape = "upright"
-menu = "upright"
-css = "normal"
+    [buildPlans.pragmasevka.metricOverride]
+    leading = 1100
+    xHeight = 550
 
-[buildPlans.IosevkaCustomSample.slopes.Italic]
-angle = 9.4
-shape = "italic"
-menu = "italic"
-css = "italic"
+    [buildPlans.pragmasevka.ligations]
+    inherits="default-calt"
+    enables = [
+        "eqslasheq",
+        "kern-dotty",
+        "kern-bars",
+        "llggeq",
+         "--fast-chaining--"
+    ]
+    disables = ["slash-asterisk"]
 
-# To enable TTC building, uncomment the following section and write your collect plans
-# [collectPlans.IosevkaCustomSample]
-# from = ["IosevkaCustomSample"]
+    [buildPlans.pragmasevka.variants]
+    inherits = "ss08"
+
+        [buildPlans.pragsq.variants.design]
+        tittle = "square"
+        punctuation-dot = "square"
+        braille-dot = "square"
+        at = "threefold-solid-inner"
+
+    [buildPlans.pragmasevka.weights.regular]
+    shape = 425
+    menu = 400
+    css = 400
+
+    [buildPlans.pragmasevka.weights.semibold]
+    shape = 600
+    menu = 600
+    css = 600
+
+    [buildPlans.pragmasevka.weights.bold]
+    shape = 800
+    menu = 700
+    css = 700
+
+    [buildPlans.pragmasevka.weights.black]
+    shape = 900
+    menu = 900
+    css = 900
+
+    [buildPlans.pragmasevka.slopes]
+    upright = "default.Upright"
+    italic = "default.Italic"

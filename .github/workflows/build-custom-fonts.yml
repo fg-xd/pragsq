@@ -1,6 +1,6 @@
-name: Build Custom Iosevka Fonts
+name: Build Font
 
-on: [push, workflow_dispatch]
+on: [workflow_dispatch]
 
 jobs:
   setup-matrix:
@@ -28,7 +28,7 @@ jobs:
   build-ttf:
     name: Build ${{ matrix.fontFamily }} font (Standalone)
     runs-on: ubuntu-latest
-    
+
     needs: [setup-matrix]
 
     strategy:
@@ -60,7 +60,7 @@ jobs:
         with:
           repository: be5invis/iosevka # You can change this to your own fork
           path: iosevka
-      
+
       # Copy custom build plans into Iosevka build directory
       - name: Copy Custom Build Plans
         shell: bash
@@ -85,7 +85,7 @@ jobs:
   build-ttc:
     name: Build ${{ matrix.fontFamily }} font (Combined)
     runs-on: ubuntu-latest
-    
+
     needs: [setup-matrix]
     if: ${{ needs.setup-matrix.outputs.collectPlans != '[]' && needs.setup-matrix.outputs.collectPlans != '' }}
 
@@ -118,7 +118,7 @@ jobs:
         with:
           repository: be5invis/iosevka # You can change this to your own fork
           path: iosevka
-      
+
       # Copy custom build plans into Iosevka build directory
       - name: Copy Custom Build Plans
         shell: bash
