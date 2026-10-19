@@ -1,5 +1,5 @@
-[buildPlans.pragmasevka]
-family = "Pragmasevka"
+[buildPlans.pragsq]
+family = "Pragsq"
 spacing = "term"
 serifs = "sans"
 noCvSs = true
@@ -7,16 +7,16 @@ exportGlyphNames = true
 
 hintParams = ["-a", "qqq"]
 
-    [buildPlans.pragmasevka.widths.normal]
+    [buildPlans.pragsq.widths.normal]
     shape = 500
     menu  = 5
     css   = "normal"
 
-    [buildPlans.pragmasevka.metricOverride]
+    [buildPlans.pragsq.metricOverride]
     leading = 1100
     xHeight = 550
 
-    [buildPlans.pragmasevka.ligations]
+    [buildPlans.pragsq.ligations]
     inherits="default-calt"
     enables = [
         "eqslasheq",
@@ -27,7 +27,7 @@ hintParams = ["-a", "qqq"]
     ]
     disables = ["slash-asterisk"]
 
-    [buildPlans.pragmasevka.variants]
+    [buildPlans.pragsq.variants]
     inherits = "ss08"
 
         [buildPlans.pragsq.variants.design]
@@ -36,26 +36,26 @@ hintParams = ["-a", "qqq"]
         braille-dot = "square"
         at = "threefold-solid-inner"
 
-    [buildPlans.pragmasevka.weights.regular]
+    [buildPlans.pragsq.weights.regular]
     shape = 425
     menu = 400
     css = 400
 
-    [buildPlans.pragmasevka.weights.semibold]
+    [buildPlans.pragsq.weights.semibold]
     shape = 600
     menu = 600
     css = 600
 
-    [buildPlans.pragmasevka.weights.bold]
+    [buildPlans.pragsq.weights.bold]
     shape = 800
     menu = 700
     css = 700
 
-    [buildPlans.pragmasevka.weights.black]
+    [buildPlans.pragsq.weights.black]
     shape = 900
     menu = 900
     css = 900
 
-    [buildPlans.pragmasevka.slopes]
+    [buildPlans.pragsq.slopes]
     upright = "default.Upright"
     italic = "default.Italic"
